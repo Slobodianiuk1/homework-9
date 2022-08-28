@@ -70,14 +70,18 @@ main {
 
 .card__list li {
 	padding: 40px;
-	width: 370px;
-	height: 340px;
+	max-width: 370px;
+	min-height: 340px;
 }
 
 
 
 .icons {
-	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
 	margin-bottom: 40px;
 }
 
@@ -87,11 +91,12 @@ main {
 	height: 36px;
 }
 
-.blue {
-	position: absolute;
-	top: 0;
-	left: 0;
+.green {
+	display: none;
 }
+
+
+
 
 li {
 	border: solid 1px transparent;
@@ -103,8 +108,12 @@ li {
 	border-radius: 8px;
 }
 
+.card__list li:hover .green {
+	display: block;
+}
+
 .card__list li:hover .blue {
-	opacity: 0;
+	display: none;
 }
 
 .card__list li h2 {
@@ -188,7 +197,7 @@ li {
 	fill: #3DB370;
 }
 
-@media only screen and (max-width: 1169px) {
+@media only screen and (max-width: 1220px) {
 	.container {
 		padding: 0 20px;
 	}
@@ -198,22 +207,25 @@ li {
 	}
 
 	.title span {
+		display: block;
 		margin-bottom: 15px;
 		font-size: 14px;
-
+		text-align: center;
 	}
 
 	.title h1 {
 		margin-bottom: 40px;
 		font-size: 34px;
 		line-height: 26px;
+		text-align: center;
+
 	}
 
 	.card__list {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 30px;
 	}
 
 	.card__list li {
@@ -221,16 +233,13 @@ li {
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 40px;
-		width: calc(100vh - 20px);
 		height: 340px;
 		margin-bottom: 30px;
 
 	}
 
-	.blue {
-		position: absolute;
-		top: 0;
-		left: 46.8%;
+	.card__list li:last-of-type {
+		margin-bottom: 0;
 	}
 
 
@@ -251,9 +260,9 @@ li {
 	}
 
 	.card__list li {
-		width: 330px;
+		max-width: 300px;
 		height: 300px;
-		text-align: center;
+
 	}
 
 	.blue {
@@ -261,5 +270,3 @@ li {
 	}
 
 }
-
-/* git */
