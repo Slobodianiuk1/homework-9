@@ -16,6 +16,28 @@ a {
 
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+body {
+	height: 100%;
+
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
 /* !header */
 .header .container {
 	display: flex;
@@ -39,6 +61,7 @@ a {
 /* !Main */
 main {
 	padding: 100px 0;
+	flex: 1 0 auto;
 }
 
 .title span {
@@ -72,6 +95,8 @@ main {
 	padding: 40px;
 	max-width: 370px;
 	min-height: 340px;
+	border: 1px solid #E5EAF4;
+	border-radius: 8px;
 }
 
 
@@ -149,9 +174,9 @@ li {
 /* !Footer */
 
 .footer {
-	max-height: 100vh;
 	padding: 40px 0;
 	background-color: #16133D;
+
 }
 
 .footer .container div {
